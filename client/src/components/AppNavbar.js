@@ -19,7 +19,7 @@ const AppNavbar = () => {
 		<div>
 			<Navbar color='dark' dark expand='sm' className='mb-5'>
 				<Container>
-					<NavbarBrand href='/'>RecipeApp</NavbarBrand>
+					<NavbarBrand href='/'>RecipeSavr</NavbarBrand>
 					<NavbarToggler onClick={handleToggle} />
 					<Collapse isOpen={isOpen} navbar>
 						<Nav className='ml-auto' navbar>

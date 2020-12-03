@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const recipes = require('./routes/api/recipes');
+const users = require('./routes/api/users');
+const auth = require('./routes/api/auth');
+const config = require('config');
 
 const app = express();
 
@@ -10,16 +13,22 @@ const app = express();
 app.use(express.json());
 
 // DB Config
-const db = require('./config/keys').mongoURI;
+const db = config.get('mongoURI');
 
 // Connect to Mongo
 mongoose
-	.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+	.connect(db, {
+		useNewUrlParser: true,
+		useCreateIndex: true,
+		useUnifiedTopology: true,
+	})
 	.then(() => console.log('MongoDB Connected...'))
 	.catch((err) => console.log(err));
 
 // Use Routes
 app.use('/api/recipes', recipes);
+app.use('/api/users', users);
+app.use('/api/auth', auth);
 
 // Serve static assets if it is in production
 if (process.env.NODE_ENV === 'production') {
