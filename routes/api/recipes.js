@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../../middleware/auth');
 
 // Item Model
 const RecipeModel = require('../../models/Recipe');
@@ -31,8 +32,8 @@ router.get('/:id', async (req, res) => {
 
 // @route:  POST api/recipes
 // @desc:   Create A Recipe
-// @access: Public
-router.post('/', async (req, res) => {
+// @access: Private
+router.post('/', auth, async (req, res) => {
 	try {
 		const recipe = new RecipeModel(req.body);
 		if (!recipe) throw Error('Something went wrong saving the recipe.');
@@ -45,8 +46,8 @@ router.post('/', async (req, res) => {
 
 // @route:  PUT api/recipes/:id
 // @desc:   Update A Recipe By ID
-// @access: Public
-router.put('/:id', async (req, res) => {
+// @access: Private
+router.put('/:id', auth, async (req, res) => {
 	try {
 		const recipe = await RecipeModel.findById(req.params.id).exec();
 		recipe.set(req.body);
@@ -59,8 +60,8 @@ router.put('/:id', async (req, res) => {
 
 // @route:  DELETE api/recipes/:id
 // @desc:   Delete A Recipe By ID
-// @access: Public
-router.delete('/:id', async (req, res) => {
+// @access: Private
+router.delete('/:id', auth, async (req, res) => {
 	try {
 		const recipe = await RecipeModel.findById(req.params.id);
 		if (!recipe) throw Error('No recipe found');
