@@ -20,16 +20,16 @@ Create a default.json file within the empty config folder then add your MONGO_UR
 Make sure you set an env var for that and the JWTSecret on deployment. 
 ```bash
 -  Create a forked copy of this project.
--  Clone your own version of the repository in your terminal
--  Download project dependencies by running one of these two commands `yarn` or `npm install`
--  Download client dependencies by running one of these two commands `yarn client-install` or `npm client-install`
--  Using the same command tool (yarn or npm) run the client & server concurrently `yarn dev` or `npm run dev`
--  Run the Express server only `yarn server` or `npm run server`
--  Run the React client only `yarn client` or `npm run client`
+-  Clone your own version of the repository in your terminal.
+-  Download project dependencies by running one of these two commands `yarn` or `npm install`.
+-  Download client dependencies by running one of these two commands `yarn client-install` or `npm client-install`.
+-  Using the same command tool (yarn or npm) run the client & server concurrently `yarn dev` or `npm run dev`.
+-  Run the Express server only `yarn server` or `npm run server`.
+-  Run the React client only `yarn client` or `npm run client`.
 -  Create a new branch: git checkout -b `<firstName-lastName>`.
 -  Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 -  Push commits: git push origin `<firstName-lastName>`.
-# Server runs on http://localhost:5000 and client on http://localhost:3000
+# Server runs on http://localhost:5000 and client on http://localhost:3000.
 ```
 
 
