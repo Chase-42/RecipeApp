@@ -15,26 +15,9 @@ https://recipe-savr.herokuapp.com/
 - [MongoDB](https://www.mongodb.com/)
 - [Bootstrap](https://reactstrap.github.io/)
 
-# Install dependencies for server
-npm install
-
-# Install dependencies for client
-npm run client-install
-
-# Run the client & server with concurrently
-npm run dev
-
-# Run the Express server only
-npm run server
-
-# Run the React client only
-npm run client
-
-
-
 ## Installation
-Create a default.json file within the empty config folder then add your MONGO_URI to the default.json file. 
-Make sure you set an env var for that and the jwtSecret on deployment. 
+Create a default.json file within the empty config folder then add your MONGO_URI & JWTSecret in a JSON object. 
+Make sure you set an env var for that and the JWTSecret on deployment. 
 ```bash
 -  Create a forked copy of this project.
 -  Clone your own version of the repository in your terminal
