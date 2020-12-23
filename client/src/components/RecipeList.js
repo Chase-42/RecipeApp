@@ -23,6 +23,12 @@ class RecipeList extends Component {
 		this.props.deleteRecipe(id);
 	};
 
+	static propTypes = {
+		getRecipes: PropTypes.func.isRequired,
+		recipe: PropTypes.object.isRequired,
+		isAuthenticated: PropTypes.bool,
+	};
+
 	render() {
 		const { recipes } = this.props.recipe;
 		return (
@@ -38,14 +44,16 @@ class RecipeList extends Component {
 										<CardLink href={recipeURL} target='_blank'>
 											Recipe Link
 										</CardLink>
-										<Button
-											className='remove-btn'
-											color='danger'
-											size='sm'
-											onClick={this.onDeleteClick.bind(this, _id)}
-										>
-											Delete Recipe
-										</Button>
+										{this.props.isAuthenticated ? (
+											<Button
+												className='remove-btn'
+												color='danger'
+												size='sm'
+												onClick={this.onDeleteClick.bind(this, _id)}
+											>
+												Delete Recipe
+											</Button>
+										) : null}
 									</div>
 								</CardBody>
 							</Card>
@@ -57,13 +65,9 @@ class RecipeList extends Component {
 	}
 }
 
-RecipeList.propTypes = {
-	getRecipes: PropTypes.func.isRequired,
-	recipe: PropTypes.object.isRequired,
-};
-
 const mapStateToProps = (state) => ({
 	recipe: state.recipe,
+	isAuthenticated: state.auth.isAuthenticated,
 });
 
 export default connect(mapStateToProps, { getRecipes, deleteRecipe })(
