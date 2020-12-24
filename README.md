@@ -28,8 +28,8 @@ Make sure you set an env var for that and the JWTSecret on deployment.
 -  Run the React client only `yarn client` or `npm run client`.
 -  Create a new branch: git checkout -b `<firstName-lastName>`.
 -  Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
--  Push commits: git push origin `<firstName-lastName>`.
-### Server runs on http://localhost:5000 and client on http://localhost:3000.
+-  Push commits: git push origin `<firstName-lastName>`. 
+Server runs on http://localhost:5000 and client on http://localhost:3000.
 
 
 
