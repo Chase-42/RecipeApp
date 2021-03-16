@@ -1,0 +1,7 @@
+{
+	"name": "RecipeSavr",
+	"short_name": "RecipeSavr",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait"
+}
