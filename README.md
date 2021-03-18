@@ -1,7 +1,7 @@
 
 ![recipesavrscreenshots](https://lh3.googleusercontent.com/pw/ACtC-3eZ0BGuR1_D5-PR5HCQx0tfhZg6JaW0pKyvDpGcUGMyRNQ4qAqzlnMQ79mgX4T-uq5TcHEdOYBm-nEMLFHS4sVGfnIpJJyup0KFelTac6Hn2uOjP8i6abrLJ5q4NLRWSK_iqybrIpt7FM3VP0oJoBV9=w3034-h1896-no?authuser=0)
 # RecipeSavr
-A full-stack application for saving recipes from across the web in one location complete with register and login functionality. 
+A full-stack application for saving recipes from across the web in one location complete with full authentication. 
 
 ## Hosted Application
 https://recipe-savr.herokuapp.com/
